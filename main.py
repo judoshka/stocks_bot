@@ -42,7 +42,9 @@ _main_menu = [
     ["Оптимальный портфель"],
     ["Лидеры приложения"]
 ]
-
+_greeting = """Привет, я U-235, индивидуальный помощник каждого инвестора! \n
+Давай заполним анкету и составим, лично под вас, портфель!\n
+Первый вопрос. Кем вы являетесь?"""
 # Состояние беседы
 (ASK_CATEGORY, RESPONSE, ASK_STOCK_NAME, ASK_STOCK_BOUGHT, ASK_STOCK_SOLD, ASK_STOCK_END, MAIN_MENU) = range(7)
 (RATING, RISK) = range(2)
@@ -199,7 +201,7 @@ async def start_command(update: Update, _) -> int:
 
     message = update.message
 
-    await message.reply_text(text='Кем вы являетесь', reply_markup=ReplyKeyboardMarkup(
+    await message.reply_text(text=_greeting, reply_markup=ReplyKeyboardMarkup(
         [_user_categories], one_time_keyboard=True, input_field_placeholder='Выберите ответ:'
     ))
 
@@ -213,7 +215,7 @@ async def poll_category(update: Update, context: ContextTypes.DEFAULT_TYPE) -> i
     category = message.text
 
     if category not in _user_categories:
-        await message.reply_text(text='Кем вы являетесь', reply_markup=ReplyKeyboardMarkup(
+        await message.reply_text(text=_greeting, reply_markup=ReplyKeyboardMarkup(
             [_user_categories], one_time_keyboard=True, input_field_placeholder='Выберите ответ:'
         ))
 
