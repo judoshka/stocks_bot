@@ -1,0 +1,144 @@
+[{
+  "user_id": 1,
+  "name": "Dmitriy",
+  "type": "experienced",
+  "type_value": 0.9,
+  "risk_value": 0.2,
+  "income": 0.06,
+  "amount": 100000,
+  "history": [
+    {
+      "action": "buy",
+      "api_name": "YNDX",
+      "price": 100,
+      "date": "2022-01-01"
+    },
+    {
+      "action": "sell",
+      "api_name": "YNDX",
+      "price": 120,
+      "date": "2022-01-01"
+    }
+  ]
+},{
+  "user_id": 2,
+  "name": "Ivan",
+  "type": "trader",
+  "type_value": 0.7,
+  "risk_value": 0.4,
+  "income": 0.02,
+  "amount": 50000,
+  "history": [
+    {
+      "action": "buy",
+      "api_name": "YNDX",
+      "price": 100,
+      "date": "2022-01-01"
+    },
+    {
+      "action": "sell",
+      "api_name": "YNDX",
+      "price": 120,
+      "date": "2022-01-01"
+    }
+  ]
+},{
+  "user_id": 3,
+  "name": "Mikhail",
+  "type": "middle",
+  "type_value": 0.3,
+  "risk_value": 0.3,
+  "income": -0.1,
+  "amount": 40000,
+  "history": [
+    {
+      "action": "buy",
+      "api_name": "YNDX",
+      "price": 100,
+      "date": "2022-01-01"
+    },
+    {
+      "action": "sell",
+      "api_name": "YNDX",
+      "price": 120,
+      "date": "2022-01-01"
+    }
+  ]
+},{
+  "user_id": 4,
+  "name": "Oleg",
+  "type": "beginner",
+  "type_value": 0.15,
+  "risk_value": 0.5,
+  "income": -0.15,
+  "amount": 10000,
+  "history": [
+    {
+      "action": "buy",
+      "api_name": "YNDX",
+      "price": 100,
+      "date": "2022-01-01"
+    },
+    {
+      "action": "sell",
+      "api_name": "YNDX",
+      "price": 120,
+      "date": "2022-01-01"
+    }
+  ]
+},{
+  "user_id": 5,
+  "name": "Alena",
+  "type": "beginner",
+  "type_value": 0.1,
+  "risk_value": 0.3,
+  "income": 0.25,
+  "amount": 5000,
+  "history": [
+    {
+      "action": "buy",
+      "api_name": "YNDX",
+      "price": 100,
+      "date": "2022-01-01"
+    },
+    {
+      "action": "sell",
+      "api_name": "YNDX",
+      "price": 120,
+      "date": "2022-01-01"
+    }
+  ]
+},{
+  "user_id": 6,
+  "name": "Helen",
+  "type": "middle",
+  "type_value": 0.4,
+  "risk_value": 0.1,
+  "income": -0.01,
+  "amount": 20000,
+  "history": [
+    {
+      "action": "buy",
+      "api_name": "YNDX",
+      "price": 100,
+      "date": "2022-01-01"
+    },
+    {
+      "action": "sell",
+      "api_name": "YNDX",
+      "price": 120,
+      "date": "2022-01-01"
+    }
+  ]
+},{
+  "user_id": {
+    "$numberLong": "5110489225"
+  },
+  "name": "Mikhail None",
+  "type": "middle",
+  "type_value": 0.3333333333333333,
+  "risk_value": 0.2833333333333334,
+  "income": 0,
+  "amount": 10000,
+  "history": []
+}]
