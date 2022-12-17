@@ -42,9 +42,8 @@ def make_portfel(risk_value):
     x1, x2 = recommendations(income_df, risk_value, n=5)
     D_matrix = make_d_matrix(x1)
     # income_df = make_income_matrix(risk_value)
-    res = optimization(D_matrix.values, income_df, risk_value)
-    stocks = str(x1)
-    return stocks + '\n' + res
+    res = optimization(D_matrix.values, income_df, risk_value, stock_names=x1)
+    return res
 
 
 if __name__ == '__main__':

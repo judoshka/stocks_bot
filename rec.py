@@ -12,6 +12,9 @@ def recommendations(data, alpha=0.5, n=5):
     result = np.max(arr)
     data['All'] = ((data["Optim"]+data["Pessim"]+data["Mix"])/3-result).apply(abs)
     data.sort_values(by='All', ascending=True, inplace=True)
-    string = np.array2string(data.index.values[0:n], separator='|')
+    # string = np.array2string(data.index.values[0:n], separator='\n')
+    string = 'Cписок акций рекомендованных вам:\n'
+    for i, val in enumerate(data.index.values[0:n]):
+        string += str(i+1) + ') ' + val + '\n'
     
-    return data.index.values[0:n], f'Список акций рекомендуемых вам: {string}'
+    return data.index.values[0:n], string

@@ -62,7 +62,7 @@ def point_func(x):
     
     return np.sum(d_avg*x)
 
-def optimization(D_matrix, df, alpha):
+def optimization(D_matrix, df, alpha, stock_names):
     global CV
     global d_avg
     global risk
@@ -77,5 +77,8 @@ def optimization(D_matrix, df, alpha):
     bounds = bound()
     sol=minimize(point_func,x0,method='SLSQP',\
                  bounds=bounds,constraints=cons)
-    X = np.array2string(sol.x, separator='|')
-    return f'Доля акций для покупки: {X}. Доходность: {sol.fun}'
+    string = 'Доля акций для покупки:\n'
+    for i in range(len(sol.x)):
+        string += stock_names[i] + ': ' + str(round(sol.x[i] / np.sum(sol.x), 2)) + '\n'
+    string += '\nДоходность: ' + str(round(sol.fun, 2))
+    return string
